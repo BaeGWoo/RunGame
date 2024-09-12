@@ -16,12 +16,24 @@ public class Runner : MonoBehaviour
     [SerializeField] Animator animator;
     [SerializeField] Rigidbody rigidbody;
     [SerializeField] float positionX;
+    [SerializeField] float speed;
 
     private void Awake()
     {
         animator = GetComponent<Animator>();
         rigidbody = GetComponent<Rigidbody>();
         positionX = 3.5f;
+        speed = 10.0f;
+    }
+
+    private void OnEnable()
+    {
+        InputManager.Instance.action += OnKeyUpdate;
+    }
+
+    private void OnDisable()
+    {
+        InputManager.Instance.action -= OnKeyUpdate;
     }
 
     // Start is called before the first frame update
@@ -66,15 +78,11 @@ public class Runner : MonoBehaviour
     private void Move(RoadLine curState)
     {
         Vector3 targetPosition = new Vector3((int)curState * positionX, 0, 0);
-        rigidbody.position = Vector3.Lerp(rigidbody.position,targetPosition,0.025f);
+        rigidbody.position = Vector3.Lerp(rigidbody.position,targetPosition,speed*Time.fixedDeltaTime);
     }
 
 
-    // Update is called once per frame
-    void Update()
-    {
-       OnKeyUpdate();
-    }
+    
 
     private void FixedUpdate()
     {
