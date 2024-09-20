@@ -374,6 +374,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1906031832}
+        m_TargetAssemblyTypeName: CoinManager, Assembly-CSharp
+        m_MethodName: InitializePosition
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &271684697
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -444,6 +456,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2164810666589487674, guid: fc7ac5a5b6e2be1468102502757e6030, type: 3}
   m_PrefabInstance: {fileID: 271684697}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &271684699 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4522076350379958871, guid: fc7ac5a5b6e2be1468102502757e6030, type: 3}
+  m_PrefabInstance: {fileID: 271684697}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c40e65b663d8e8541b676323582a4258, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &458180494
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -530,6 +553,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1578866790}
         m_TargetAssemblyTypeName: RoadManager, Assembly-CSharp
         m_MethodName: newPosition
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1421637011}
+        m_TargetAssemblyTypeName: CoinManager, Assembly-CSharp
+        m_MethodName: InitializePosition
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -794,6 +829,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2164810666589487674, guid: fc7ac5a5b6e2be1468102502757e6030, type: 3}
   m_PrefabInstance: {fileID: 847376941}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &847376943 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4522076350379958871, guid: fc7ac5a5b6e2be1468102502757e6030, type: 3}
+  m_PrefabInstance: {fileID: 847376941}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c40e65b663d8e8541b676323582a4258, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &865634246
 GameObject:
   m_ObjectHideFlags: 0
@@ -1242,6 +1288,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2164810666589487674, guid: fc7ac5a5b6e2be1468102502757e6030, type: 3}
   m_PrefabInstance: {fileID: 1421637009}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1421637011 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4522076350379958871, guid: fc7ac5a5b6e2be1468102502757e6030, type: 3}
+  m_PrefabInstance: {fileID: 1421637009}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c40e65b663d8e8541b676323582a4258, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1479810437
 GameObject:
   m_ObjectHideFlags: 0
@@ -1484,6 +1541,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 847376943}
+        m_TargetAssemblyTypeName: CoinManager, Assembly-CSharp
+        m_MethodName: InitializePosition
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1578866788
 GameObject:
   m_ObjectHideFlags: 0
@@ -1704,6 +1773,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2164810666589487674, guid: fc7ac5a5b6e2be1468102502757e6030, type: 3}
   m_PrefabInstance: {fileID: 1906031830}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1906031832 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4522076350379958871, guid: fc7ac5a5b6e2be1468102502757e6030, type: 3}
+  m_PrefabInstance: {fileID: 1906031830}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c40e65b663d8e8541b676323582a4258, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &2091088433 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7873187647639627565, guid: b3df71257c9f8d14d8d5b03e7b13cb26, type: 3}
@@ -1727,6 +1807,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1578866790}
         m_TargetAssemblyTypeName: RoadManager, Assembly-CSharp
         m_MethodName: newPosition
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 271684699}
+        m_TargetAssemblyTypeName: CoinManager, Assembly-CSharp
+        m_MethodName: InitializePosition
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
