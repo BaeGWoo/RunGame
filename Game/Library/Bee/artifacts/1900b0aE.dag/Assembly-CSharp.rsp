@@ -366,6 +366,7 @@
 "Assets/Scripts/Managers/Singleton.cs"
 "Assets/Scripts/Road.cs"
 "Assets/Scripts/Runner.cs"
+"Assets/Scripts/SelectButton.cs"
 -langversion:9.0
 /deterministic
 /optimize+

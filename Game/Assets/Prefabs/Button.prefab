@@ -93,6 +93,7 @@ GameObject:
   - component: {fileID: 2281419947366486963}
   - component: {fileID: 6949747119764689363}
   - component: {fileID: 8573672166833356942}
+  - component: {fileID: -8931399898912451010}
   m_Layer: 0
   m_Name: Button
   m_TagString: Untagged
@@ -118,7 +119,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 350, y: 125}
+  m_SizeDelta: {x: 750, y: 125}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6611676951472861854
 CanvasRenderer:
@@ -141,7 +142,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -226,7 +227,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20a9aef5ce4054c4c924c2daac16ef14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textNmae: {fileID: 52253277418653578}
 --- !u!114 &8573672166833356942
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -244,8 +244,8 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 6949747119764689363}
-          m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
+        - m_Target: {fileID: -8931399898912451010}
+          m_TargetAssemblyTypeName: SelectButton, Assembly-CSharp
           m_MethodName: onMouseOver
           m_Mode: 1
           m_Arguments:
@@ -260,8 +260,8 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 6949747119764689363}
-          m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
+        - m_Target: {fileID: -8931399898912451010}
+          m_TargetAssemblyTypeName: SelectButton, Assembly-CSharp
           m_MethodName: OnMouseExit
           m_Mode: 1
           m_Arguments:
@@ -272,3 +272,31 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: -8931399898912451010}
+          m_TargetAssemblyTypeName: SelectButton, Assembly-CSharp
+          m_MethodName: OnMouseClick
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &-8931399898912451010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8905779672980344155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d5c943e12a6db9479f286956510a2b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

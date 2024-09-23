@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 
@@ -88,4 +89,16 @@ public class Runner : MonoBehaviour
     {
         Move(curState);
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+
+        IColliderable colliderable = other.GetComponent<IColliderable>();
+
+        if (colliderable != null)
+        {
+            colliderable.Activate();
+        }
+    }
+
 }

@@ -35,7 +35,7 @@ public class CoinManager : MonoBehaviour
                 coin.name=coin.name.Substring(0, index);
             }
 
-            coin.SetActive(false);
+            coin.GetComponent<MeshRenderer>().enabled=false;
             coinList.Add(coin);
         }
     }
@@ -45,11 +45,17 @@ public class CoinManager : MonoBehaviour
     {
         float randomPosition = Random.Range(-1, 2) * 3.5f;
         for (int i = 0; i < coinList.Count; i++)
-        {
-            //coinList[i].SetActive(false);
+        {           
             Vector3 newPosition = new Vector3(randomPosition, 0, coinList[i].transform.position.z);
             coinList[i].transform.position = newPosition;
-            coinList[i].SetActive(true);
+            
+            
+
+            if (!coinList[i].GetComponent<MeshRenderer>().enabled)
+            {
+                coinList[i].GetComponent<MeshRenderer>().enabled = true;
+                coinList[i].transform.Find("Holy hit").gameObject.SetActive(false);
+            }
         }
 
 

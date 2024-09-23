@@ -28,15 +28,7 @@ public class MenuManager : MonoBehaviour
 
 
    
-    public void onMouseOver()
-    {
-        //textNmae.fontSize = 25;
-    }
-
-    public void OnMouseExit()
-    {
-        //textNmae.fontSize = 15;
-    }
+   
 
     public void OnMouseClick()
     {
