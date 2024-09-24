@@ -18,6 +18,7 @@ public class Runner : MonoBehaviour
     [SerializeField] Rigidbody rigidbody;
     [SerializeField] float positionX;
     [SerializeField] float speed;
+    [SerializeField] SpeedManager speedManager;
 
     private void Awake()
     {
@@ -25,6 +26,8 @@ public class Runner : MonoBehaviour
         rigidbody = GetComponent<Rigidbody>();
         positionX = 3.5f;
         speed = 10.0f;
+
+      
     }
 
     private void OnEnable()
@@ -87,7 +90,9 @@ public class Runner : MonoBehaviour
 
     private void FixedUpdate()
     {
+       
         Move(curState);
+       
     }
 
     private void OnTriggerEnter(Collider other)
