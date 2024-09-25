@@ -1,26 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
-public class SpeedManager : MonoBehaviour
+public class SpeedManager : Singleton<SpeedManager>
 {
     [SerializeField] float basicSpeed;
     [SerializeField] float limitSpeed;
     [SerializeField] float increaseValue;
-    [SerializeField] float increaseTime;
 
-    WaitForSeconds waitForSeconds=new WaitForSeconds(10);
 
-    public static SpeedManager Instance;
 
-    private void Awake()
+    private void Start()
     {
         basicSpeed = 25.0f;
         limitSpeed = 70.0f;
         increaseValue = 5.0f;
-        increaseTime = 10.0f;
-        Instance = this;
     }
 
     public float Speed
@@ -30,7 +24,7 @@ public class SpeedManager : MonoBehaviour
 
     public IEnumerator IncreaseSpeed()
     {
-        
+
         while (basicSpeed < limitSpeed)
         {
             yield return CoroutineCashe.WaitForSecond(10);

@@ -7,7 +7,7 @@ public class CoinManager : MonoBehaviour
 {
     [SerializeField] float offset = 2.5f;
     [SerializeField] int createCount = 15;
-    [SerializeField] GameObject coin;
+    //[SerializeField] GameObject coin;
     [SerializeField] List<GameObject> coinList;
     void Awake()
     {
@@ -19,23 +19,19 @@ public class CoinManager : MonoBehaviour
     public void CreateCoin()
     {
 
-        for(int i=0;i<createCount; i++)
+        for (int i = 0; i < createCount; i++)
         {
-            
-           
-            coin=Instantiate(coin);
 
-           coin.transform.SetParent(gameObject.transform);
+            GameObject coin = ResourcesManager.Instance.Instantiate("Coin", gameObject.transform);
+
+
+            coin.transform.SetParent(gameObject.transform);
 
             coin.transform.localPosition = new Vector3(0, 0, offset * i);
 
-            int index = coin.name.IndexOf("(Clone)");
-            if (index > 0)
-            {
-                coin.name=coin.name.Substring(0, index);
-            }
 
-            coin.GetComponent<MeshRenderer>().enabled=false;
+
+            coin.GetComponent<MeshRenderer>().enabled = false;
             coinList.Add(coin);
         }
     }

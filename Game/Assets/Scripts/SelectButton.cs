@@ -5,11 +5,13 @@ using UnityEngine.UI;
 
 public class SelectButton : MonoBehaviour
 {
-
+    [SerializeField] AudioClip enterAudioClip;
 
     public void onMouseOver()
     {
         gameObject.GetComponentInChildren<Text>().fontSize = 75;
+
+        AudioManager.Instance.Listen(enterAudioClip);
     }
 
     public void OnMouseExit()

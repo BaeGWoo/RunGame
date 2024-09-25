@@ -18,7 +18,7 @@ public class Runner : MonoBehaviour
     [SerializeField] Rigidbody rigidbody;
     [SerializeField] float positionX;
     [SerializeField] float speed;
-    [SerializeField] SpeedManager speedManager;
+
 
     private void Awake()
     {
