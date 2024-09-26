@@ -11,7 +11,7 @@ public enum RoadLine
     RIGHT
 }
 
-public class Runner : MonoBehaviour
+public class Runner : State
 {
     [SerializeField] RoadLine curState;
     [SerializeField] Animator animator;
@@ -32,11 +32,13 @@ public class Runner : MonoBehaviour
 
     private void OnEnable()
     {
+        base.OnEnable();
         InputManager.Instance.action += OnKeyUpdate;
     }
 
     private void OnDisable()
     {
+        base.OnDisable();
         InputManager.Instance.action -= OnKeyUpdate;
     }
 
@@ -48,6 +50,9 @@ public class Runner : MonoBehaviour
 
     void OnKeyUpdate()
     {
+        if (!state)
+            return;
+
         if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
             if ((int)curState > -1)
@@ -90,7 +95,7 @@ public class Runner : MonoBehaviour
 
     private void FixedUpdate()
     {
-       
+        if (state == false) return;
         Move(curState);
        
     }

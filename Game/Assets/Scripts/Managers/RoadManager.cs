@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RoadManager : MonoBehaviour
+public class RoadManager : State
 {
     [SerializeField] int createCount = 4;
     [SerializeField] float offset = 40.0f;
    
+
     [SerializeField] List<GameObject> roads;
+    [SerializeField] SpeedManager speedManager;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,7 +18,7 @@ public class RoadManager : MonoBehaviour
 
         AddRoad();
        
-        StartCoroutine(SpeedManager.Instance.IncreaseSpeed());
+       
     }
 
     void AddRoad()
@@ -31,9 +33,13 @@ public class RoadManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(!state)
+            return;
+
+
         for(int i = 0; i < createCount; i++)
         {
-            roads[i].transform.Translate(Vector3.back * SpeedManager.Instance.Speed * Time.deltaTime);
+            roads[i].transform.Translate(Vector3.back* speedManager.Speed * Time.deltaTime);
         }
     }
 
@@ -46,4 +52,6 @@ public class RoadManager : MonoBehaviour
         newRoad.transform.position = new Vector3(0, 0, newZ);
         roads.Add(newRoad);
     }
+
+   
 }

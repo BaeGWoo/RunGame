@@ -13,31 +13,45 @@ public enum EventType
 
 public class EventManager
 {
-    private static readonly IDictionary<EventType, UnityAction> dictionary = new Dictionary<EventType, UnityAction>();
+    private static readonly IDictionary<EventType, UnityEvent> dictionary = new Dictionary<EventType, UnityEvent>();
 
     public static void Subscribe(EventType eventType, UnityAction unityAction)
     {
-        UnityEvent unityEvent;
-        if (dictionary.TryGetValue(eventType, out unityAction))
+        UnityEvent unityEvent = null;
+        
+        if(dictionary.TryGetValue(eventType, out unityEvent))
         {
-            //unityEvent.AddListener(unityAction);
+            unityEvent.AddListener(unityAction);
         }
 
         else
         {
             unityEvent = new UnityEvent();
+
             unityEvent.AddListener(unityAction);
-            dictionary.Add(eventType, unityAction);
+
+            dictionary.Add(eventType, unityEvent);
         }
     }
 
     public static void UnSubScribe(EventType eventType, UnityAction unityAction)
     {
+        UnityEvent unityEvent = null;
 
+        if(dictionary.TryGetValue(eventType,out unityEvent))
+        {
+            unityEvent.RemoveListener(unityAction);
+        }
     }
 
     public static void Publish(EventType eventType)
     {
+        UnityEvent unityEvent = null;
+
+        if (dictionary.TryGetValue(eventType, out unityEvent))
+        {
+            unityEvent.Invoke();
+        }
 
     }
 }

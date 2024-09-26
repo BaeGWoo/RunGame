@@ -1,14 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Resources;
 using UnityEngine;
 
-public class SpeedManager : Singleton<SpeedManager>
+public class SpeedManager : State 
 {
     [SerializeField] float basicSpeed;
     [SerializeField] float limitSpeed;
     [SerializeField] float increaseValue;
 
-
+    private void Awake()
+    {
+        StartCoroutine(IncreaseSpeed());
+    }
 
     private void Start()
     {
@@ -25,7 +29,7 @@ public class SpeedManager : Singleton<SpeedManager>
     public IEnumerator IncreaseSpeed()
     {
 
-        while (basicSpeed < limitSpeed)
+        while (state&&basicSpeed < limitSpeed)
         {
             yield return CoroutineCashe.WaitForSecond(10);
             basicSpeed += increaseValue;

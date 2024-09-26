@@ -1022,6 +1022,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2a441a5c6c765745b5a10475c217a8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  state: 1
   curState: 0
   animator: {fileID: 0}
   rigidbody: {fileID: 0}
@@ -1154,6 +1155,55 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1 &1068682703
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1068682705}
+  - component: {fileID: 1068682704}
+  m_Layer: 0
+  m_Name: ObstacleManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1068682704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1068682703}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94f2107b3283efa448ce250af7be268b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obstacles: []
+  obstacle:
+  - {fileID: 2499486486167075819, guid: 24d8fa0b1754aab46a5e4953182adadc, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+--- !u!4 &1068682705
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1068682703}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1260979058
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1601,10 +1651,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03d735728482ac04f8104cf0a15dc9ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  state: 1
   createCount: 4
   offset: 40
-  speed: 5
   roads: []
+  speedManager: {fileID: 2069691161}
 --- !u!1 &1695068722
 GameObject:
   m_ObjectHideFlags: 0
@@ -1784,6 +1835,54 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c40e65b663d8e8541b676323582a4258, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &2069691160
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2069691162}
+  - component: {fileID: 2069691161}
+  m_Layer: 0
+  m_Name: SpeedManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2069691161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2069691160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12b968a0ac79e154481758dd414742e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  state: 1
+  basicSpeed: 0
+  limitSpeed: 0
+  increaseValue: 0
+--- !u!4 &2069691162
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2069691160}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &2091088433 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7873187647639627565, guid: b3df71257c9f8d14d8d5b03e7b13cb26, type: 3}
@@ -1898,3 +1997,5 @@ SceneRoots:
   - {fileID: 1578866789}
   - {fileID: 865634250}
   - {fileID: 489322403788010515}
+  - {fileID: 2069691162}
+  - {fileID: 1068682705}

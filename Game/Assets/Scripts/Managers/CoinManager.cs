@@ -24,14 +24,10 @@ public class CoinManager : MonoBehaviour
 
             GameObject coin = ResourcesManager.Instance.Instantiate("Coin", gameObject.transform);
 
-
-            coin.transform.SetParent(gameObject.transform);
-
             coin.transform.localPosition = new Vector3(0, 0, offset * i);
 
-
-
             coin.GetComponent<MeshRenderer>().enabled = false;
+
             coinList.Add(coin);
         }
     }
@@ -49,8 +45,7 @@ public class CoinManager : MonoBehaviour
 
             if (!coinList[i].GetComponent<MeshRenderer>().enabled)
             {
-                coinList[i].GetComponent<MeshRenderer>().enabled = true;
-                coinList[i].transform.Find("Holy hit").gameObject.SetActive(false);
+                coinList[i].GetComponent<MeshRenderer>().enabled = true;               
             }
         }
 
