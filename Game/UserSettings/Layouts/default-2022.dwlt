@@ -119,7 +119,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 100}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 119
+  controlID: 48
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -190,8 +190,8 @@ MonoBehaviour:
     y: 0
     width: 196
     height: 659
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
@@ -636,7 +636,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/Resources
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -644,16 +644,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Resources
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Administrator\Desktop\RunGame\Game
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: e2650000
-    m_LastClickedID: 26082
-    m_ExpandedIDs: 00000000926500009465000096650000e4650000e6650000ba7e0000
+    scrollPos: {x: 0, y: 109}
+    m_SelectedIDs: 225d0000
+    m_LastClickedID: 23842
+    m_ExpandedIDs: 00000000025d0000045d0000065d0000265d000050750000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -681,7 +681,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000926500009465000096650000
+    m_ExpandedIDs: 00000000025d0000045d0000065d0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -774,23 +774,23 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: f024feff
-      m_LastClickedID: -121616
-      m_ExpandedIDs: ec2bfeffea2cfeff1a39feff923afeff5842feff7e4cfeff0659feff7e5afeff8a61feff7c6cfeff7a77feff5a82feff3a8dfeffb28efeff3c9bfeffd49bfeff62a2feffc6abfeffc4b7feff3cb9feffe4d8feff74effeff1c1fffff3a25ffff0833ffffbe38ffff1e62ffffe2afffff9ab5fffffecaffff38d5ffff4ad6fffff2dcffffd2ddffff5cdeffff4afaffffbe6d0000206e000092760000ae760000b2990000e49a0000289b00004c9b0000
+      m_SelectedIDs: 50760000
+      m_LastClickedID: 30288
+      m_ExpandedIDs: 9876ffff7086ffffb692ffff02a0ffff04abffff42b6ffff80c1ffff90cdffff90d8ffffb8e3ffffd6eeffff52f0ffff80f8ffffb0fafffff4ffffff846700005e690000d46a0000466c0000ba6d0000306f0000a2700000147200008e7300000675000050760000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: Cone
-        m_OriginalName: Cone
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: -118686
+        m_UserData: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 0
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 8}
       m_SearchString: 
