@@ -10,7 +10,8 @@ public class RoadManager : State
 
     [SerializeField] List<GameObject> roads;
     [SerializeField] SpeedManager speedManager;
-    // Start is called before the first frame update
+
+   
     void Start()
     {
         
@@ -27,6 +28,7 @@ public class RoadManager : State
         {
             roads.Add(transform.GetChild(i).gameObject);
         }
+       
     }
 
 
