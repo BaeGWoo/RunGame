@@ -8,7 +8,8 @@ public class ObstacleManager : MonoBehaviour
     [SerializeField] GameObject obstacle;
 
     [SerializeField] int createCount=5;
-    [SerializeField] int randomIndex;
+    [SerializeField] int randomIndex=0;
+
 
     private void Awake()
     {
@@ -17,6 +18,7 @@ public class ObstacleManager : MonoBehaviour
 
     private void Start()
     {
+       
         Create();
         StartCoroutine(Activate());
     }
@@ -37,6 +39,7 @@ public class ObstacleManager : MonoBehaviour
     {
         while (true)
         {
+            
             yield return CoroutineCashe.WaitForSecond(2.5f);
             
             randomIndex=Random.Range(0,obstacles.Count);
@@ -44,7 +47,7 @@ public class ObstacleManager : MonoBehaviour
             while (obstacles[randomIndex].activeSelf)
             {
                 // 배열 내 모든 오브젝트가 활성화 되어있을 경우
-                if (ExaminActive(obstacles))
+                if (ExaminActive())
                 {
                     obstacle = ResourcesManager.Instance.Instantiate("Cone", gameObject.transform);
 
@@ -57,18 +60,24 @@ public class ObstacleManager : MonoBehaviour
                 randomIndex=(randomIndex+1)%obstacles.Count;
             }
 
-            obstacles[(randomIndex)].SetActive(true);         
+           
+                     
         }
     }
 
-    private bool ExaminActive(List<GameObject> list)
+    private bool ExaminActive()
     {    
-        for(int i=0;i<list.Count;i++)
+        for(int i=0;i< obstacles.Count;i++)
         {
-            if (!list[i].activeSelf)
+            if (!obstacles[i].activeSelf)
                 return false;
         }
         return true;
     }
 
+
+    public GameObject GetObstacle()
+    {
+        return obstacles[(randomIndex)];
+    }
 }

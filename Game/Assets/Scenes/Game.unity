@@ -2101,7 +2101,29 @@ MonoBehaviour:
   - {fileID: 116910623}
   - {fileID: 29356088}
   - {fileID: 38118350}
-  count: 0
+  positionX:
+  - {fileID: 694844507}
+  - {fileID: 1508068649}
+  - {fileID: 1029328294}
+  count: -1
+  randomPositionZ:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  obstacleManager: {fileID: 1068682704}
 --- !u!4 &2101519422
 Transform:
   m_ObjectHideFlags: 0
